@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>D3.js Buffet</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/black.css">
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-markdown>
+                    <textarea data-template>
+                    ### d3.js Buffet
+
+                    Shane Caldwell and Roger Filmyer
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                       # JavaScript:
+
+                        - Interpreted language used primarily within the browser
+                        - Manipulates the DOM (Document Object Model)
+                        - Asynchronously shuffles data from client to server
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Why JavaScript:
+
+                        - Disable JavaScript in your browser, and you're left with HTML and CSS
+                        - This sets style (so things can still be pretty) but they're no responsive to user action
+                        - JavaScript is often what enables you to go from web-site to web-application
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Visualizations on the web:
+
+                        - Check out a cool pudding article like[The Differences in How CNN, MSNBC, and FOX Cover the News](https://pudding.cool/2018/01/chyrons/)
+                        - Look at the way the DOM reacts to us - making the web page interactive. 
+                        - These are made with D3
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Why not Plotly?
+
+                        - Plotly provides an API to create D3 charts and applications
+                        - For basic things, this is easier then trying to make things work in JavaScript
+                        - For specific, weird visualizations, you want access to the full power of D3 - and that means writing it yourself. 
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Pre-requisites - After doing your class reading you should know:
+
+                        - How to write basic JavaScript
+                        - How to get basic JavaScript to run in the browser                    
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # Let's test that theory:
+
+                            - ```git clone https://github.com/SJCaldwell/d3_tutorial.git```
+                            - cd into d3_tutorial
+                            - Run ```python -m SimpleHTTPServer 8080```
+                            - Look in folder Section1_Intro
+                            - There are 3 exercises here, each in their own html file. Once you have completed the exercise, it will display EXERCISE COMPLETED when you load the page. 
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # So What does D3 Use?
+                
+                            - HTML: Determines structure of the web page
+                            - CSS: Sets the style
+                            - JavaScript: Allows interactive updates to the DOM
+                            - SVG (Scalable Vector Graphics): Text-based image format
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # Little more on SVG
+
+                            - [Show little snippet of SVG here]
+                            - SVG is XML based 
+                            - rect, circle, ellipse, line, text, and path are all valid shapes
+                            - Your visualizations are made by drawing these shapes and updating them with JavaScript
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # General flow of d3:
+                            
+                            - Read in your data
+                            - Bind it to SVGs
+                            - Scale your data before drawing so your visualization is robust
+                            - Label your axes
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # Creating elements in d3
+                            
+                            - d3 gives you the ability to create new elements before binding them to data
+                            ```JavaScript
+                            d3.select("body")
+                              .append("p")
+                              .text("New Paragraph")
+                            ```
+                            - This is called chain syntax 
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # Chain syntax
+
+                            - Kind of like using pipes in R. 
+                            - Not absolutely necessary, but sooo much prettier
+                            - You can do: 
+
+                            ```JavaScript
+                            var body = d3.select("body")
+                            var p = body.append("p")
+                            p.text("New paragraph")
+                            ```
+
+                            - But you don't actually want all those variables!                     
+                        </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                            # Update the DOM with d3
+
+                            - Look in Section2_ReadData
+                            - Open exercise 1.html
+                            - Right now, you should see the new paragraph added like we showed in the slide.
+                            - Change this code so instead, there is an h1 tag that says "New Header"
+                    </textarea>
+                </section>
+				<section data-markdown>
+                    <textarea data-template>
+                            # Read in Data
+
+                            - D3 is pretty smart, and has been built to read lots of formats. 
+                            - CSV with ```d3.csv()```
+                            - JSON with ```d3.json()```
+                            - TSV with ```d3.tsv()```
+                            - You get the idea, perhaps?
+                    </textarea>
+                </section>
+				<section data-markdown>
+                    <textarea data-template>
+                        # So let's read in data
+
+                        - look in Section2_ReadData
+                        - Open exercise2.html
+                        - As soon as you browser to the html, your data is read in. Nice!
+                        - The exercise here is instead to tell me what you can learn about the data structure d3 uses after the data is read in.
+                        - You got 5 minutes to tell us what cool things you've learned. GO GO GO!                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### The End
+
+                        - We Done
+                        - Questions?
+                    </textarea>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+</html>
