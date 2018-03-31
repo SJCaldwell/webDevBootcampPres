@@ -117,90 +117,9 @@
                             example <img src="saucy_photo.png">
                             <h1>, <h2>, <h3>, etc. Ordered list of headers, from 
                             smallest to largest
-                            
+
                         ```
                    </script>
-                </section>
-                <section data-markdown>
-                    <textarea data-template>
-                            # Little more on SVG
-
-                            - [Show little snippet of SVG here]
-                            - SVG is XML based 
-                            - rect, circle, ellipse, line, text, and path are all valid shapes
-                            - Your visualizations are made by drawing these shapes and updating them with JavaScript
-                    </textarea>
-                </section>
-                <section data-markdown>
-                    <textarea data-template>
-                            # General flow of d3:
-                            
-                            - Read in your data
-                            - Bind it to SVGs
-                            - Scale your data before drawing so your visualization is robust
-                            - Label your axes
-                    </textarea>
-                </section>
-                <section data-markdown>
-                    <textarea data-template>
-                            # Creating elements in d3
-                            
-                            - d3 gives you the ability to create new elements before binding them to data
-                            ```JavaScript
-                            d3.select("body")
-                              .append("p")
-                              .text("New Paragraph")
-                            ```
-                            - This is called chain syntax 
-                    </textarea>
-                </section>
-                <section data-markdown>
-                    <textarea data-template>
-                            # Chain syntax
-
-                            - Kind of like using pipes in R. 
-                            - Not absolutely necessary, but sooo much prettier
-                            - You can do: 
-
-                            ```JavaScript
-                            var body = d3.select("body")
-                            var p = body.append("p")
-                            p.text("New paragraph")
-                            ```
-
-                            - But you don't actually want all those variables!                     
-                        </textarea>
-                </section>
-                <section data-markdown>
-                    <textarea data-template>
-                            # Update the DOM with d3
-
-                            - Look in Section2_ReadData
-                            - Open exercise 1.html
-                            - Right now, you should see the new paragraph added like we showed in the slide.
-                            - Change this code so instead, there is an h1 tag that says "New Header"
-                    </textarea>
-                </section>
-				<section data-markdown>
-                    <textarea data-template>
-                            # Read in Data
-
-                            - D3 is pretty smart, and has been built to read lots of formats. 
-                            - CSV with ```d3.csv()```
-                            - JSON with ```d3.json()```
-                            - TSV with ```d3.tsv()```
-                            - You get the idea, perhaps?
-                    </textarea>
-                </section>
-				<section data-markdown>
-                    <textarea data-template>
-                        # So let's read in data
-
-                        - look in Section2_ReadData
-                        - Open exercise2.html
-                        - As soon as you browser to the html, your data is read in. Nice!
-                        - The exercise here is instead to tell me what you can learn about the data structure d3 uses after the data is read in.
-                        - You got 5 minutes to tell us what cool things you've learned. GO GO GO!                    </textarea>
                 </section>
                 <section data-markdown>
                     <textarea data-template>
