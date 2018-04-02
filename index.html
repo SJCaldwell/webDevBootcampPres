@@ -42,7 +42,7 @@
 
                         - The web can be abstracted away for me so I don't have to understand it
 
-                        - My name is Noah and the web singlehandedly destroyed my family don't make me do thi
+                        - My name is Noah and the web singlehandedly destroyed my family don't make me do this
 
                     </textarea>
                 </section>
@@ -58,7 +58,7 @@
                         - Everything you need to learn d3.js
 
                         - HTML 
-                        - css 
+                        - CSS 
                         - JavaScript
                         - SVG
                     </textarea>
@@ -70,7 +70,7 @@
                         - We're going to force you to build a website after this using all the elements we discussed. 
                         - When Roger and I walk around, you'll feel awkward asking us stuff we already explicitly explained during this presentation.
                         - Roger will say things like "Yeah, like we said in the presentation..."
-                        - So awkward
+                        - So awkward...
                     </textarea>
                 </section>
                 <section data-markdown>
@@ -85,7 +85,7 @@
                 <section data-markdown>
                         <script type="text/template">
                         ```HTML
-                        <!DOCTYPE HTML>
+                        <!DOCTYPE html>
                         <html>
                             <head>
                                 <title>News Story</title>
@@ -100,7 +100,7 @@
                     </section>
                 <section data-markdown>
                     <textarea data-template>
-                        # Structure & content
+                        # Structure & Content
 
                         - Defines a hierarchy of relations
                         - Page is made up of elements and their children
@@ -110,17 +110,164 @@
                 </section>
                 <section data-markdown>
                     <script type = "text/template">
+                        # Other tags
                         ```HTML
-                            Other tags:
-                            <b> - Bolds text
-                            <img> - Takes a reference to an image as an argument, for 
-                            example <img src="saucy_photo.png">
-                            <h1>, <h2>, <h3>, etc. Ordered list of headers, from 
-                            smallest to largest
+                            <strong> - Bolds text
+                            <img> - Takes a reference to an image as an argument, 
+                                for example <img src="saucy_photo.png">
+                            <h1>, <h2>, <h3>, etc. Ordered list of headers, 
+                                from smallest to largest
+                            <a> - Creates a hyperlink 
+                                ex: <a href="https://space.pizza">🌌🍕</a>
                             
                         ```
                    </script>
                 </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # CSS
+                        ![I went to RISD](/img/risd.png)
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # HTML vs CSS
+
+                        * HTML is for *content*
+                        * CSS is for *presentation*
+                        (in 2018)
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # HTML vs CSS
+
+                        With CSS:
+
+                        ![Turo's front page, with CSS](/img/turo.png)
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # HTML vs CSS
+
+                        Without CSS:
+
+                        ![Turo's front page, with CSS](/img/turo_nocss.png)
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # HTML vs CSS
+
+                        Don't mix them:
+
+                        ![Church Street Media's website, with HTML side-by-side](/img/csmedia.png)
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # CSS
+
+                        ```css
+                        body {
+                            font-family: "Comic Sans MS", cursive, serif;
+                            background-color: chartreuse;
+                        }
+                        ```
+
+                        6. Selector (body)
+                        9. Declaration Block ({})
+                        6. Property Name (background-color)
+                        9. Property Value (chartreuse)
+
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Selectors
+
+                        ```css
+                        tag .class-name #id-value
+                        ```
+
+                        ```html
+                        <tag class="class-name" id="id-value"></tag>
+                        ```
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Selectors
+
+                        ```html
+                        <body>
+                            <nav> <!-- "Doesn't do anything" -->
+                                <ul> <!-- Bullet Points ("Unordered List") -->
+                                    <li><a href="/">Home</a></li> <!-- "List Item" -->
+                                    <li><a href="/about/">About Me</a></li>
+                                </ul>
+                            </nav>
+                            <ul>
+                                <li> Hello </li>
+                                <li> World </li>
+                            </ul>
+                        </body>
+                        ```
+
+                        How do I select the ul element in nav, but *not* the one in the body?
+
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Selectors
+
+                        ```css
+                        nav ul {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                        }
+
+                        nav ul li {
+                            padding: 2.5%;
+                            list-style: none;
+                        }
+                        ```
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        # Selectors
+
+                        Before:
+
+                        After:
+                        
+                        ```
+                    </textarea>
+                </section>
+<!-- Selectors:
+    tag .class #id
+    Styles:
+        Fonts/Colors:
+            font-size
+            font-family
+            color
+            background-color
+        Spacing:
+            margin: 0 100%;
+            padding: 3px;
+        Layout:
+            display: block;
+            display: none;
+    margin, padding
+    "how do I remember this crap?"
+    * Google it!
+    * [Mozilla Developer Network](https://developer.mozilla.org)
+    * [w3schools](https://www.w3schools.com/)
+-->
                 <section data-markdown>
                     <textarea data-template>
                             # Little more on SVG
@@ -181,7 +328,7 @@
                             - Change this code so instead, there is an h1 tag that says "New Header"
                     </textarea>
                 </section>
-				<section data-markdown>
+                <section data-markdown>
                     <textarea data-template>
                             # Read in Data
 
@@ -192,7 +339,7 @@
                             - You get the idea, perhaps?
                     </textarea>
                 </section>
-				<section data-markdown>
+                <section data-markdown>
                     <textarea data-template>
                         # So let's read in data
 
